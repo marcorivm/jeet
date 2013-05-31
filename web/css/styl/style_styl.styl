@@ -1,5 +1,56 @@
 @import 'jeet/framework'
 @import 'jeet/goodies'
+edit()
+
+body > .grid
+	position: relative;
+	center()
+	overflow hidden
+	margin-bottom: 10px
+
+	// First grid
+	&:first-of-type > div
+		&:first-of-type
+			col(4,10,2.5)
+			> div
+				background-color: rgba(50,0,0,0.4)
+				height 150px
+				margin-top: 150px
+				col(1,4,4,2.5)
+		&:nth-of-type(2)
+			col(5,10,2)
+			> div
+				background-color: rgba(0,0,100,0.4)
+				&
+					col(3,5,2.5, 2)
+				&:first-of-type > div
+					background-color: rgba(70,60,100,0.4)
+					height 150px
+					margin-top: 150px
+					col(1,2,2,5)
+					&:first-of-type > div
+						background-color: rgba(250,60,100,0.4)
+						col(1,3,3,10)
+				&:nth-of-type(2)
+					col(1,5,5, 2)
+
+		&:last-of-type
+			col(5,10,10)
+			background-color: rgba(0,100,0,0.4)
+
+	// Second grid
+	&:last-of-type > div
+		&:first-of-type
+			col(6,10, 1.66667)
+			> div
+				background-color: rgba(0,50,30,0.4)
+				col(1,6,6, 1.66667)
+		&:last-of-type
+			col(3,10, 2.5)
+			background-color: rgba(100,10,10,0.4)
+	div
+		height 300px
+		background-color: rgba(250,250,250,1)
 
 
 
@@ -7,5 +58,4 @@
 
 // Mobile
 bp()
-
 endbp()
