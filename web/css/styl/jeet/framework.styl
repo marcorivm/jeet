@@ -28,9 +28,10 @@ center(max_width = 1410px)
     *margin-right auto !important
     *margin-left auto !important
 
-column(numerator = 1, denominator = 1, number_of_nested_columns = 0, g = gutter)
+column(numerator = 1, denominator = 1, number_of_nested_columns = 0, ratio = 1, g = gutter)
     cf()
     float left
+    g = ratio * gutter
     if (number_of_nested_columns != 0)
         width ( (100 - (g*2) * (number_of_nested_columns - 1)) / number_of_nested_columns )% // Thanks flebron from #math
         margin-left (g)%
